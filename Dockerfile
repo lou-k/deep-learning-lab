@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 COPY requirements.txt /tmp/requirements.txt
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update  && \
-    apt-get install -y python3.7 python3.7-dev python3-distutils-extra screen git psmisc systemd systemd-sysv openssh-server vim nano iputils-ping curl wget && \
+    apt-get install -y python3.7 python3.7-dev python3-distutils-extra screen git psmisc systemd systemd-sysv openssh-server vim nano iputils-ping curl wget rsync htop && \
     ln -s /usr/bin/python3.7 /usr/local/bin/python && \
     wget -O /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py && \
     python3.7 /tmp/get-pip.py && \
